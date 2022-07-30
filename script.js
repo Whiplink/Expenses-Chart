@@ -19,4 +19,5 @@ fetch('./data.json')
   }
 })
 const date = new Date()
-bars[date.getDay()].style.backgroundColor = "hsl(186, 34%, 60%)"
+const day = date.getDay()-1 < 0? 6: date.getDay()-1
+bars[day].style.backgroundColor = "hsl(186, 34%, 60%)"
